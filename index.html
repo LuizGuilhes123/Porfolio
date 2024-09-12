@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Aquilles</title>
+    <script src="script.js"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTS -->
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Agência Aquilles</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#topo-do-site">Início</a></li>
+                    <li><a href="#especialidades">Especialidade</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="topo-do-site" class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL <span>.</span></h1>
+                        <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online dos meus sonhos como Dev.</p>
+
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="img-topo-site">
+                        <img src="images/Guih.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section><!--topo-do-site-->
+
+        <section id="especialidades" class="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Back End</h3>
+                        <p>Desenvolvedor Java Spring Boot motivado e experiente com 4 anos de experiência no desenvolvimento de aplicações escaláveis e robustas.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-palette"></i>
+                        <h3>Front End</h3>
+                        <p>Desenvolvedor Front End experiente com 4 anos de experiência em criar interfaces de usuário atraentes e intuitivas com HTML, CSS, JavaScript e React.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-database"></i>
+                        <h3>Banco de Dados</h3>
+                        <p>Experiência em design e desenvolvimento de bancos de dados relacionais e NoSQL, incluindo MySQL, PostgreSQL, MongoDB e Cassandra.</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--especialidades-->
+
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="imagem-sobre">
+                     <img src="images/exemplo1.jpg" alt="">   
+                    </div>
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU LUIZ GUILHERME.</span></h2>
+                        <p>Sou um Desenvolvedor Back-end especializado em Java, com 4 anos de experiência na área. Meu foco é o desenvolvimento de soluções escaláveis e eficientes utilizando tecnologias como Spring Boot e Vue.js. Estou sempre em busca de conhecimento e oportunidades de crescimento na área de tecnologia e desenvolvimento, onde posso aplicar minhas habilidades e expertise para entregar resultados de alta qualidade.</p>
+                        <p>Sou uma pessoa calma e racional, com uma abordagem proativa e focada em resolver problemas. Minha comunicação eficaz e frequente é essencial para liderar equipes e estabelecer relacionamentos sólidos com colegas e clientes. Meu objetivo é sempre encontrar soluções eficientes e melhorias contínuas, trabalhando em estreita colaboração com os membros da equipe e outros stakeholders. Minha personalidade tranquila e minha capacidade de liderança tornam-me um profissional altamente eficaz e respeitado em qualquer ambiente de trabalho.</p>
+                        <div class="btn-social">
+                            <a href="https://github.com/LuizGuilhes123"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/luiz-guilherme-sousa-braga-648480219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://wa.me/qr/7JSITABSVJY7E1"><button><i class="bi bi-whatsapp"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--sobre-->
+
+        <section id="portfolio" class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/ingressos.png);">
+                        <div class="overlay">Projeto cinema</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/doações.png);">
+                        <div class="overlay">Projeto doações</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/viagem.jpg);">
+                        <div class="overlay">Projeto Viagens <a href="https://github.com/LuizGuilhes123/Viagem/tree/develop/projeto"></a></div>
+                    </div>
+                </div>
+            </div>
+        </section><!--portfolio-->
+
+        <section class="contato">
+            <div class="interface">
+                <h2 class="titulo">ENTRE EM <span>CONTATO.</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="" id="" placeholder="Seu email:" required>
+                    <input type="text" name="" id="" placeholder="Seu celular:">
+                    <textarea name="" id="" placeholder="Sua Mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR" onclick="enviarFormulario()"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div classclass="interface">
+            <div class="line-footer">
+                <div class="flex" style="justify-content: flex-end; gap: 90px;">
+                    <div class="btn-social" style="text-align: right;">
+                        <a href="https://github.com/LuizGuilhes123"><button><i class="bi bi-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/luiz-guilherme-sousa-braga-648480219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://wa.me/qr/7JSITABSVJY7E1"><button><i class="bi bi-whatsapp"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:luizguilhermeinformat@gmail.com">luizguilhermeinformat@gmail.com</a></p>
+            </div>
+            <p>&copy; 2024 Agência Aquilles. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
