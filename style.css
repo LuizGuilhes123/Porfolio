@@ -12,7 +12,8 @@ html {
 
 body {
     background-color: #000;
-    height: 100vh;
+    min-height: 100vh;
+    color: #fff; /* Define a cor padrão do texto como branco */
 }
 
 .interface {
@@ -36,7 +37,7 @@ body {
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    transition:.2s;
+    transition: .2s;
 }
 
 button:hover, form .btn-enviar input:hover {
@@ -59,7 +60,7 @@ header {
     padding: 40px 4%;
 }
 
-header >.interface {
+header > .interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,7 +81,7 @@ header a {
     color: #5c5c5c;
     text-decoration: none;
     display: inline-block;
-    transition:.2s;
+    transition: .2s;
 }
 
 header a:hover {
@@ -88,17 +89,80 @@ header a:hover {
     transform: scale(1.05);
 }
 
+/* Estilização do Menu Desktop */
 header nav ul {
     list-style-type: none;
-    padding: 0px 30px;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+    gap: 40px; /* Espaçamento entre os itens */
 }
 
-header nav ul li {
+header nav ul li a {
+    color: #5c5c5c; /* Cor do texto */
+    text-decoration: none;
     display: inline-block;
-    padding: 0 40px;
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 2px solid #5c5c5c; /* Borda com a mesma cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-/* ESTILO DO TOPO O SITE */
+header nav ul li a:hover {
+    background-color: #e0e0e0; /* Destaque cinza claro ao passar o mouse */
+    border-color: #a0a0a0; /* Cor da borda ao passar o mouse */
+    color: #000; /* Mudança de cor do texto */
+    transform: none; /* Remove o efeito de escala anterior */
+}
+
+header nav ul li a.active {
+    background-color: #d0d0d0; /* Fundo para a opção ativa */
+    border-color: #808080; /* Borda para a opção ativa */
+    color: #000; /* Cor do texto para a opção ativa */
+}
+
+/* Estilização dos Botões Sociais */
+.btn-social {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex; /* Adicionado para centralizar o ícone */
+    justify-content: center; /* Centraliza horizontalmente o ícone */
+    align-items: center; /* Centraliza verticalmente o ícone */
+}
+
+.btn-social button:hover {
+    background-color: #0056b3; /* Alterar cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.btn-social a {
+    text-decoration: none;
+}
+
+.btn-social a button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-social a button:hover {
+    background-color: #0056b3;
+}
+
+/* ESTILO DO TOPO DO SITE */
 .topo-do-site {
     padding: 40px 4%;
 }
@@ -160,7 +224,8 @@ header nav ul li {
     padding: 40px;
     margin-top: 45px;
     border-radius: 20px;
-    transition: .2s;
+    transition: 0.2s;
+    background-color: #1a1a1a; /* Adiciona um fundo para melhor contraste */
 }
 
 .especialidades-box:hover{
@@ -185,58 +250,53 @@ header nav ul li {
     margin: 0px 0px 20px 0px;
 }
 
-/* SOBRE */
-
-section.sobre{
+/* TESTEMUNHOS */
+.testemunhos {
     padding: 80px 4%;
+    background-color: #000; /* Fundo preto para manter a consistência */
 }
 
-section.sobre .flex{
-    align-items: center;
-    gap: 60px;
+.testemunhos .titulo {
+    margin-bottom: 40px;
 }
 
-.sobre .txt-sobre{
-    color: #fff;
+.testemunhos-flex {
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.sobre .txt-sobre h2{
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 30px;
+.testemunho-card {
+    background-color: #2c2c2c; /* Fundo cinza para os cards */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.sobre .txt-sobre h2 span{
+.testemunho-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.testemunho-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testemunho-card h3 {
+    font-size: 20px;
     color: #007bff;
-    display: block;
+    text-align: right;
 }
-
-.sobre .txt-sobre p{
-    margin: 20px 0;
-    text-align: justify;
-}
-
-.btn-social button{
-   width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #007bff;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition:.2s;
-}
-
-.imagem-sobre img {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
 
 /* PORTFÓLIO */
 section.portfolio{
-    padding: 80px 4%;
+    padding: 80px 4%; /* Restaurado o padding original */
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
@@ -250,7 +310,7 @@ section.portfolio.flex{
     height: 460px;
     background-size: cover;
     background-position: 100% 0%;
-    transition: 8s;
+    transition: background-position 8s ease; /* Restaurada a transição anterior */
     cursor: pointer;
     border-radius: 40px;
     position: relative;
@@ -275,7 +335,7 @@ section.portfolio.flex{
     font-weight: 600;
     color: #fff;
     opacity: 0;
-    transition:.5s;
+    transition: 0.5s;
 }
 
 .overlay:hover{
@@ -326,10 +386,14 @@ form textarea{
 .contato form.btn-enviar input {
     width: 120px;
     background-color: #007bff;
-    color: #000;
+    color: #fff; /* Mantido como branco para melhor contraste */
     font-weight: 700;
     cursor: pointer;
-    transition:.2s;
+    transition: 0.2s;
+}
+
+.contato form.btn-enviar input:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 /* RODAPÉ */
@@ -371,4 +435,53 @@ footer.line-footer p a{
 .navbar-toggler:focus ~.navbar-nav,
 .navbar-toggler:focus.navbar-nav {
   left: 0;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav ul li a {
+        padding: 8px 16px;
+        border-radius: 6px;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .btn-contato button {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .especialidades.flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .img-port {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Responsividade para Testemunhos */
+    .testemunhos-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testemunho-card {
+        width: 100%;
+    }
 }
