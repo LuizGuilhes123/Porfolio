@@ -11,17 +11,19 @@ html {
 }
 
 body {
-    background-color: #000;
+    background-color: #121212; /* Fundo preto suave */
     min-height: 100vh;
-    color: #fff; /* Define a cor padrão do texto como branco */
+    color: #fff; /* Cor padrão do texto */
 }
 
+/* Interface Container */
 .interface {
     max-width: 1280px;
     margin: 0 auto;
     padding: 40px 4%;
 }
 
+/* Flex Container */
 .flex {
     display: flex;
     align-items: center;
@@ -29,22 +31,24 @@ body {
     gap: 90px;
 }
 
+/* Botão de Contato */
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
     background-color: #007bff;
-    border: 0;
+    border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-button:hover, form .btn-enviar input:hover {
+.btn-contato button:hover {
     box-shadow: 0px 0px 8px #007bff;
     transform: scale(1.05);
 }
 
+/* Títulos */
 h2.titulo {
     color: #fff;
     font-size: 38px;
@@ -58,6 +62,7 @@ h2.titulo span {
 /* ESTILO DO CABECALHO */
 header {
     padding: 40px 4%;
+    position: relative;
 }
 
 header > .interface {
@@ -81,7 +86,7 @@ header a {
     color: #5c5c5c;
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 header a:hover {
@@ -162,6 +167,100 @@ header nav ul li a.active {
     background-color: #0056b3;
 }
 
+/* Modal de Contato */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #007bff;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000;
+}
+
+.modal-content form input::placeholder,
+.modal-content form textarea::placeholder {
+    color: #777;
+}
+
+.modal-content form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.btn-enviar input {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar input:hover {
+    background-color: #0056b3;
+}
+
 /* ESTILO DO TOPO DO SITE */
 .topo-do-site {
     padding: 40px 4%;
@@ -176,7 +275,7 @@ header nav ul li a.active {
 .topo-do-site h1 {
     color: #fff;
     font-size: 42px;
-    line-height: 40px;
+    line-height: 1.2;
 }
 
 .topo-do-site h1 span {
@@ -186,10 +285,14 @@ header nav ul li a.active {
 .topo-do-site p {
     color: #fff;
     margin: 40px 0px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 .topo-do-site.img-topo-site img {
     position: relative;
+    max-width: 100%;
+    height: auto;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -204,7 +307,7 @@ header nav ul li a.active {
 
 /* ESPECIALIDADES */
 .especialidades {
-    padding: 40px 4%;
+    padding: 60px 4%;
 }
 
 .especialidades.interface {
@@ -214,21 +317,27 @@ header nav ul li a.active {
     justify-content: center;
 }
 
-.especialidades.flex {
+.especialidades-flex {
     flex-wrap: wrap;
     gap: 60px;
+    justify-content: center;
 }
 
 .especialidades-box {
     color: #fff;
     padding: 40px;
-    margin-top: 45px;
     border-radius: 20px;
     transition: 0.2s;
-    background-color: #1a1a1a; /* Adiciona um fundo para melhor contraste */
+    background-color: #1a1a1a; /* Fundo para melhor contraste */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 350px;
+    height: 100%; /* Faz com que todos os boxes tenham a mesma altura */
 }
 
-.especialidades-box:hover{
+.especialidades-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #ffffff78;
 }
@@ -239,9 +348,9 @@ header nav ul li a.active {
 }
 
 .especialidades-box h3 {
-   color: #007bff;
-   font-size: 28px;
-   margin: 15px 0px;
+    color: #007bff;
+    font-size: 28px;
+    margin: 15px 0px;
 }
 
 .especialidades-box p {
@@ -253,11 +362,12 @@ header nav ul li a.active {
 /* TESTEMUNHOS */
 .testemunhos {
     padding: 80px 4%;
-    background-color: #000; /* Fundo preto para manter a consistência */
+    background-color: #12121200; /* Fundo preto para manter a consistência */
 }
 
 .testemunhos .titulo {
     margin-bottom: 40px;
+    font-size: 2rem;
 }
 
 .testemunhos-flex {
@@ -274,7 +384,7 @@ header nav ul li a.active {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .testemunho-card:hover {
@@ -295,38 +405,42 @@ header nav ul li a.active {
 }
 
 /* PORTFÓLIO */
-section.portfolio{
-    padding: 80px 4%; /* Restaurado o padding original */
+.portfolio {
+    padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
-section.portfolio.flex{
-    justify-content: space-around;
-    margin-top: 60px;
+.portfolio-flex {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
 }
 
-.img-port{
+.img-port {
     width: 360px;
     height: 460px;
     background-size: cover;
-    background-position: 100% 0%;
-    transition: background-position 8s ease; /* Restaurada a transição anterior */
+    background-position: center;
+    transition: background-position 0.8s ease; /* Transição mais rápida */
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 360px;
+    min-height: 300px;
 }
 
-.img-port:hover{
-    background-position: 100% 100%;
+.img-port:hover {
+    background-position: center;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -335,19 +449,33 @@ section.portfolio.flex{
     font-weight: 600;
     color: #fff;
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 
-.overlay:hover{
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 123, 255, 0.8);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.overlay a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.overlay:hover {
     opacity: 1;
 }
 
 /* CONTATO */
-section.contato {
+.contato {
     padding: 80px 4%;
 }
 
-.contato.flex {
+.contato-flex {
     justify-content: center;
     gap: 40px;
 }
@@ -362,18 +490,18 @@ section.contato {
     margin-top: 40px;
 }
 
-form input, form textarea{
+form input, form textarea {
     width: 100%;
     background-color: #24242432;
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     padding: 20px 15px;
     border-radius: 15px;
     color: #fff;
     font-size: 18px;
 }
 
-form textarea{
+form textarea {
     resize: none;
     height: 200px;
 }
@@ -390,6 +518,8 @@ form textarea{
     font-weight: 700;
     cursor: pointer;
     transition: 0.2s;
+    border: none;
+    border-radius: 5px;
 }
 
 .contato form.btn-enviar input:hover {
@@ -397,13 +527,13 @@ form textarea{
 }
 
 /* RODAPÉ */
-footer{
+footer {
     padding: 60px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
     color: #fff;
 }
 
-footer.flex{
+footer.flex {
     justify-content: space-between;
 }
 
@@ -411,42 +541,86 @@ footer.line-footer {
     padding: 20px 0;
 }
 
-.borda{
+.borda {
     border-top: 2px solid #007bff;
 }
 
-footer.line-footer p i{
+footer.line-footer p i {
     color: #007bff;
     font-size: 22px;
 }
 
-footer.line-footer p a{
+footer.line-footer p a {
     color: #fff;
 }
 
 /* NAVBAR */
 .navbar-nav {
-  width: 100%;
-  position: relative;
-  left: -100%;
-  transition: left 0.3s ease-out;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    right: 4%;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
-.navbar-toggler:focus ~.navbar-nav,
-.navbar-toggler:focus.navbar-nav {
-  left: 0;
+.navbar-nav.hidden {
+    display: none;
+}
+
+.navbar-nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.navbar-nav ul li a {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: none;
+    border-radius: 5px;
+}
+
+.navbar-nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsividade para Tablets */
+@media (max-width: 1024px) {
+    .flex {
+        gap: 60px;
+    }
+
+    .especialidades-box {
+        max-width: 300px;
+    }
+
+    .img-port {
+        width: 300px;
+        height: 380px;
+    }
 }
 
 /* Responsividade para Mobile */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        gap: 20px;
+    .menu-desktop {
+        display: none;
     }
 
-    header nav ul li a {
-        padding: 8px 16px;
-        border-radius: 6px;
+    .menu-mobile {
+        display: block;
+    }
+
+    #navbar-nav {
+        display: none;
+    }
+
+    #navbar-nav.active {
+        display: block;
     }
 
     .flex {
@@ -465,9 +639,13 @@ footer.line-footer p a{
         font-size: 20px;
     }
 
-    .especialidades.flex {
+    .especialidades-flex {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .especialidades-box {
+        max-width: 100%;
     }
 
     .img-port {
@@ -483,5 +661,64 @@ footer.line-footer p a{
 
     .testemunho-card {
         width: 100%;
+    }
+
+    /* Ajustes na Topo do Site */
+    .topo-do-site h1 {
+        font-size: 2rem;
+    }
+
+    .topo-do-site p {
+        font-size: 1rem;
+    }
+
+    .img-topo-site img {
+        width: 100%;
+    }
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 480px) {
+    h2.titulo {
+        font-size: 1.8rem;
+    }
+
+    .especialidades-box i {
+        font-size: 50px;
+    }
+
+    .especialidades-box h3 {
+        font-size: 24px;
+    }
+
+    .especialidades-box p {
+        font-size: 14px;
+    }
+
+    .testemunho-card p {
+        font-size: 16px;
+    }
+
+    .testemunho-card h3 {
+        font-size: 18px;
+    }
+
+    .overlay {
+        font-size: 20px;
+    }
+
+    .overlay a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .contato form input, .contato form textarea {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
+
+    .contato form.btn-enviar input {
+        width: 100px;
+        padding: 10px 0;
     }
 }
