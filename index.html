@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Aquilles</title>
-    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,9 +28,11 @@
             </nav>
 
             <div class="btn-contato">
-                <button id="open-modal">Contato</button>
+                <!-- Botão atualizado com redirecionamento -->
+                <a href="https://forms.gle/38EfDPz32xooCNm3A" target="_blank">
+                    <button>Contato</button>
+                </a>
             </div>
-            
         </div>
 
         <!-- Menu Mobile -->
@@ -53,7 +55,6 @@
                         <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL <span>.</span></h1>
                         <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online dos meus sonhos como Dev.</p>
                     </div>
-
                     <div class="img-topo-site">
                         <img src="images/Guih.png" alt="Imagem do Topo do Site">
                     </div>
@@ -112,9 +113,7 @@
                 <h2 class="titulo">TESTEMUNHOS</h2>
                 <div class="flex testemunhos-flex">
                     <div class="testemunho-card">
-                        <p>"Trabalhar com o Guilherme foi uma experiência extremamente gratificante. Guilherme é um profissional de TI dedicado e talentoso, e bastante compromissado com a excelência, isso é evidente em tudo o que faz.
-
-                        Durante o tempo que colaboramos juntos, Guilherme demonstrou um enorme interesse em aprender e muita dedicação, além da capacidade de solucionar problemas complexos de forma eficiente e criativa."</p>
+                        <p>"Trabalhar com o Guilherme foi uma experiência extremamente gratificante. Guilherme é um profissional de TI dedicado e talentoso, e bastante compromissado com a excelência, isso é evidente em tudo o que faz. Durante o tempo que colaboramos juntos, Guilherme demonstrou um enorme interesse em aprender e muita dedicação, além da capacidade de solucionar problemas complexos de forma eficiente e criativa."</p>
                         <h3>Edson Fernandes</h3>
                     </div>
                     <div class="testemunho-card">
@@ -142,20 +141,6 @@
             </div>
         </section><!--portfolio-->
 
-        <!-- Modal de Contato -->
-        <div id="contact-modal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close-button" id="close-modal">&times;</span>
-                <h2>Entre em Contato</h2>
-                <form id="meu-formulario">
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
-                    <input type="email" name="email" id="email" placeholder="Seu email:" required>
-                    <input type="tel" name="celular" id="celular" placeholder="Seu celular:" required>
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                </form>
-            </div>
-        </div>
     </main>
 
     <footer>

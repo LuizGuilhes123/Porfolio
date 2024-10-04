@@ -10,15 +10,9 @@ async function enviarFormulario(event) {
     const dados = { nome, email, celular, mensagem };
 
     try {
-        const response = await fetch('http://localhost:8080/api/contato', { // Certifique-se de que a URL está correta
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dados)
-        });
+        const response = await axios.post('http://localhost:8080/api/contatos', dados);
 
-        if (response.ok) {
+        if (response.status === 200) {
             alert('Mensagem enviada com sucesso!');
             document.getElementById('meu-formulario').reset();
             fecharModal();
@@ -43,12 +37,6 @@ function fecharModal() {
     modal.classList.add('hidden');
 }
 
-// Função para toggle do menu móvel
-function toggleMenu() {
-    const navbarNav = document.getElementById('navbar-nav');
-    navbarNav.classList.toggle('active');
-}
-
 // Adiciona os event listeners ao carregar o DOM
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('meu-formulario');
@@ -67,7 +55,4 @@ document.addEventListener('DOMContentLoaded', function() {
             fecharModal();
         }
     });
-
-    const menuToggle = document.getElementById('menu-toggle');
-    menuToggle.addEventListener('click', toggleMenu);
 });
