@@ -249,13 +249,14 @@ header nav ul li a.active {
     padding: 40px;
     border-radius: 20px;
     transition: 0.2s;
-    background-color: #1a1a1a; /* Fundo para melhor contraste */
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    background-color: #1a1a1a;
+    flex: 1 1 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 350px;
-    height: 100%; /* Faz com que todos os boxes tenham a mesma altura */
+    height: 100%;
+    margin-top: 20px; 
 }
 
 .especialidades-box:hover {
